@@ -56,8 +56,22 @@ SELECT CONCAT(ROUND((SUM(sales) / SUM(profit)), 2), ' %')
 FROM orders;
 ```
 * **Profit per Order:**
+```
+SELECT order_id, SUM(profit) AS "profit per order"
+FROM orders
+GROUP BY order_id;
+```
 * **Sales per Customer:**
+```
+SELECT customer_name, SUM(sales) as "sales per customer"
+FROM orders
+GROUP BY customer_name;
+```
 * **Avg. Discount:**
+```
+SELECT AVG(discount) as "total avg discount"
+FROM orders;
+```
 * **Monthly Sales by Segment:**
 * **Monthly Sales by Product Category:**
 ### Обзор продуктовых метрик:
