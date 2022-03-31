@@ -39,5 +39,30 @@
 
 [скрипт загрузки таблицы returns](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/scripts/returns.sql)
 
-### Поиск ответов на бизнес-вопросы:
-1. 
+### Обзор ключевых бизнес-метрик:
+* **Total sales:** *2297200.86 $* 
+``` 
+SELECT ROUND(SUM(sales), 2)
+FROM orders; 
+```
+* **Total profits:** *286397.02 $* 
+```
+SELECT ROUND(SUM(profit), 2)
+FROM orders;
+```
+* **Profit ratio:** *8,02 %*
+```
+SELECT CONCAT(ROUND((SUM(sales) / SUM(profit)), 2), ' %')
+FROM orders;
+```
+* **Profit per Order:**
+* **Sales per Customer:**
+* **Avg. Discount:**
+* **Monthly Sales by Segment:**
+* **Monthly Sales by Product Category:**
+### Обзор продуктовых метрик:
+* **Sales by Product Category over time:**
+### Обзор покупателей:
+* **Sales and Profit by Customer:**
+* **Customer Ranking:**
+* **Sales per region:**
