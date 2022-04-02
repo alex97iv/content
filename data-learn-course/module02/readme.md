@@ -30,7 +30,7 @@
 |Person|	Региональный менеджер|
 |Returned|	Возвраты товара|
 
-[скрипт загрузки таблицы order](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/scripts/orders.sql) </br> 
+[скрипт загрузки таблицы orders](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/scripts/orders.sql) </br> 
 2. **people** - содержит данные о продавце с привязкой к конкретному региону; </br> 
 
 |Атрибут|Расшифровка|
