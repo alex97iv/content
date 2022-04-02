@@ -91,9 +91,44 @@ GROUP BY segment, EXTRACT(MONTH FROM DATE (Order_Date))
 ORDER BY segment, EXTRACT(MONTH FROM DATE (Order_Date)) ASC;
 ```
 * **Monthly Sales by Product Category:**
+```
+SELECT category, 
+       EXTRACT(MONTH FROM DATE (Order_Date)) AS month, 
+       SUM(sales) AS "total sales"
+FROM orders
+GROUP BY category, EXTRACT(MONTH FROM DATE (Order_Date))
+ORDER BY category, EXTRACT(MONTH FROM DATE (Order_Date)) ASC;
+```
 ### Обзор продуктовых метрик:
 * **Sales by Product Category over time:**
+```
+SELECT category, SUM(sales) AS "sales", Order_Date AS "order date"
+FROM orders
+GROUP BY category, Order_Date
+ORDER BY category, Order_date;
+```
 ### Обзор покупателей:
 * **Sales and Profit by Customer:**
+```
+SELECT Customer_ID AS "ID",
+       Customer_Name "Name",
+       SUM(sales) AS "Total sales", 
+       SUM(profit) AS "Total profit"
+FROM orders
+GROUP BY Customer_ID, Customer_Name
+ORDER BY Customer_ID;
+```
 * **Customer Ranking:**
+```
+SELECT Customer_ID, Customer_Name, COUNT(*) AS "orders number"
+FROM orders
+GROUP BY Customer_ID, Customer_Name
+ORDER BY COUNT(*) DESC;
+```
 * **Sales per region:**
+```
+SELECT region, COUNT(*) AS "sales number"
+FROM orders
+GROUP BY region
+ORDER BY COUNT(*) DESC;
+```
