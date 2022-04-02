@@ -82,6 +82,14 @@ SELECT AVG(discount) as "total avg discount"
 FROM orders;
 ```
 * **Monthly Sales by Segment:**
+```
+SELECT segment, 
+       EXTRACT(MONTH FROM DATE (Order_Date)) AS month, 
+       SUM(sales) AS "total sales"
+FROM orders
+GROUP BY segment, EXTRACT(MONTH FROM DATE (Order_Date))
+ORDER BY segment, EXTRACT(MONTH FROM DATE (Order_Date)) ASC;
+```
 * **Monthly Sales by Product Category:**
 ### Обзор продуктовых метрик:
 * **Sales by Product Category over time:**
