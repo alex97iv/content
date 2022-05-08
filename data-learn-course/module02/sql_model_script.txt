@@ -1,0 +1,87 @@
+CREATE TABLE customer_dim
+(
+ customer_id   serial NOT NULL,
+ customer_name varchar(50) NOT NULL,
+ segment       varchar(50) NOT NULL,
+ CONSTRAINT PK_150 PRIMARY KEY ( customer_id )
+);
+
+
+CREATE TABLE order_dim
+(
+ ord_id    serial NOT NULL,
+ order_id  varchar(50) NOT NULL,
+ returned  varchar(50) NOT NULL,
+ ship_date date NOT NULL,
+ ship_mode varchar(50) NOT NULL,
+ CONSTRAINT PK_154 PRIMARY KEY ( ord_id )
+);
+
+
+CREATE TABLE product_dim
+(
+ prod_id      serial NOT NULL,
+ product_id   varchar(50) NOT NULL,
+ product_name varchar(50) NOT NULL,
+ category     varchar(50) NOT NULL,
+ sub_category varchar(50) NOT NULL,
+ CONSTRAINT PK_144 PRIMARY KEY ( prod_id )
+);
+
+
+CREATE TABLE region_dim
+(
+ region_id   serial NOT NULL,
+ country     varchar(50) NOT NULL,
+ "state"       varchar(50) NOT NULL,
+ city        varchar(50) NOT NULL,
+ postal_code varchar(50) NOT NULL,
+ region      varchar(50) NOT NULL,
+ CONSTRAINT PK_160 PRIMARY KEY ( region_id )
+);
+
+
+CREATE TABLE sales_fact
+(
+ row_id      serial NOT NULL,
+ sales       decimal NOT NULL,
+ profit      decimal NOT NULL,
+ quantity    int NOT NULL,
+ discount    decimal NOT NULL,
+ ord_id      serial NOT NULL,
+ region_id   serial NOT NULL,
+ salesman_id serial NOT NULL,
+ customer_id serial NOT NULL,
+ prod_id     serial NOT NULL,
+ CONSTRAINT PK_138 PRIMARY KEY ( row_id ),
+ CONSTRAINT FK_169 FOREIGN KEY ( customer_id ) REFERENCES customer_dim ( customer_id ),
+ CONSTRAINT FK_172 FOREIGN KEY ( prod_id ) REFERENCES product_dim ( prod_id ),
+ CONSTRAINT FK_175 FOREIGN KEY ( salesman_id ) REFERENCES salesman_dim ( salesman_id ),
+ CONSTRAINT FK_178 FOREIGN KEY ( region_id ) REFERENCES region_dim ( region_id ),
+ CONSTRAINT FK_181 FOREIGN KEY ( ord_id ) REFERENCES order_dim ( ord_id )
+);
+
+CREATE INDEX FK_171 ON sales_fact
+(
+ customer_id
+);
+
+CREATE INDEX FK_174 ON sales_fact
+(
+ prod_id
+);
+
+CREATE INDEX FK_177 ON sales_fact
+(
+ salesman_id
+);
+
+CREATE INDEX FK_180 ON sales_fact
+(
+ region_id
+);
+
+CREATE INDEX FK_183 ON sales_fact
+(
+ ord_id
+);
