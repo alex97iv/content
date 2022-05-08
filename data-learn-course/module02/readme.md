@@ -132,3 +132,12 @@ FROM orders
 GROUP BY region
 ORDER BY COUNT(*) DESC;
 ```
+### Dimensional data model design:
+*Conceptual stage:* <br>
+![Conceptual stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/conceptual_diagram.png)
+
+*Logical stage:* <br>
+![Logical stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/logical_diagram.png)
+
+*Physical stage:* <br>
+![Physical stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/physical_diagram.png)
