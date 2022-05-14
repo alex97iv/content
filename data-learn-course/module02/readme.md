@@ -141,3 +141,7 @@ ORDER BY COUNT(*) DESC;
 
 *Physical stage:* <br>
 ![Physical stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/physical_diagram.png)
+
+### Simple cloud DWH example:
+The following analytical decision was chosen to complete the exercise with AWS cloud.
+![Yandex cloud analytical decision](
