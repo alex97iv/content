@@ -144,4 +144,4 @@ ORDER BY COUNT(*) DESC;
 
 ### Simple cloud DWH example:
 The following analytical decision was chosen to complete the exercise with AWS cloud.
-![Yandex cloud analytical decision](
+![Yandex cloud analytical decision](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/cloud_desicion.png)
