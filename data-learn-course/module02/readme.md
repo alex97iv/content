@@ -142,10 +142,14 @@ ORDER BY COUNT(*) DESC;
 *Physical stage:* <br>
 ![Physical stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/physical_diagram.png)
 
-### Simple cloud DWH example:
+### Cloud analytical DWH example:
 The following analytical decision was chosen to complete the exercise with AWS cloud.
 ![Yandex cloud analytical decision](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/cloud_desicion.png)
 The Postgres DB contains two schemas: staging and business.<br>
 Staging part of the DB was populated by scripts mentioned above.
 Dimensional model diagram for business part of the DB represented in 'Dimensional data model design' part. <br>
 [Script](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/scripts/from_stg_to_bsns.sql) for migrating data from staging layer to business layer is provided.
+P.S. The DB diagram provided above was changed while I was deploying DWH's business layer. <br>
+Changed some attributes' names and types to make it more convenient.
+
+### Dashboard sample:
