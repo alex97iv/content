@@ -142,7 +142,7 @@ ORDER BY COUNT(*) DESC;
 *Physical stage:* <br>
 ![Physical stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/physical_diagram.png)
 
-### Cloud analytical DWH example:
+### Analytical cloud DWH example:
 The following analytical decision was chosen to complete the exercise with AWS cloud.
 ![Yandex cloud analytical decision](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/cloud_desicion.png)
 The Postgres DB contains two schemas: staging and business.<br>
