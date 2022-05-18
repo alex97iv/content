@@ -148,4 +148,4 @@ The following analytical decision was chosen to complete the exercise with AWS c
 The Postgres DB contains two schemas: staging and business.<br>
 Staging part of the DB was populated by scripts mentioned above.
 Dimensional model diagram for business part of the DB represented in 'Dimensional data model design' part. <br>
-Script for migrating data from staging layer to business layer is provided.
+[Script](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/scripts/from_stg_to_bsns.sql) for migrating data from staging layer to business layer is provided.
