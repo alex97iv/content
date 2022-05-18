@@ -153,3 +153,6 @@ P.S. The DB diagram provided above was changed while I was deploying DWH's busin
 Changed some attributes' names and types to make it more convenient.
 
 ### Dashboard sample:
+As BI tool I've used DataLens from Yandex:
+![pic1](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/dashboard_dataset.png)
+![pic2](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/datalens_dashboard.png)
