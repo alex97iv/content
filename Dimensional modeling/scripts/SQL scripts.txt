@@ -1,0 +1,41 @@
+-- monthly sales by segment
+SELECT segment, 
+       EXTRACT(MONTH FROM DATE (Order_Date)) AS month, 
+       SUM(sales) AS "total sales"
+FROM orders
+GROUP BY segment, EXTRACT(MONTH FROM DATE (Order_Date))
+ORDER BY segment, EXTRACT(MONTH FROM DATE (Order_Date)) ASC;
+
+-- monthly sales by product category
+SELECT category, 
+       EXTRACT(MONTH FROM DATE (Order_Date)) AS month, 
+       SUM(sales) AS "total sales"
+FROM orders
+GROUP BY category, EXTRACT(MONTH FROM DATE (Order_Date))
+ORDER BY category, EXTRACT(MONTH FROM DATE (Order_Date)) ASC;
+
+-- sales by product category over time
+SELECT category, SUM(sales) AS "sales", Order_Date AS "order date"
+FROM orders
+GROUP BY category, Order_Date
+ORDER BY category, Order_date;
+
+-- sales and profit by customer
+SELECT Customer_ID AS "ID",
+       Customer_Name "Name",
+       SUM(sales) AS "Total sales", 
+       SUM(profit) AS "Total profit"
+FROM orders
+GROUP BY Customer_ID, Customer_Name
+ORDER BY Customer_ID;
+
+-- customer ranking
+SELECT Customer_ID, Customer_Name, COUNT(*) AS "orders number"
+FROM orders
+GROUP BY Customer_ID, Customer_Name
+ORDER BY COUNT(*) DESC;
+
+-- sales per region
+SELECT region, COUNT(*) "sales number"
+FROM orders
+GROUP BY region;
