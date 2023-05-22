@@ -134,17 +134,17 @@ ORDER BY COUNT(*) DESC;
 ```
 ### Dimensional data model design:
 *Conceptual stage:* <br>
-![Conceptual stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/conceptual_diagram.png)
+![Conceptual stage of design](https://github.com/alex97iv/superstore/blob/main/Dimensional%20modeling/conceptual_diagram.png)
 
 *Logical stage:* <br>
-![Logical stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/logical_diagram.png)
+![Logical stage of design](https://github.com/alex97iv/superstore/blob/main/Dimensional%20modeling/logical_diagram.png)
 
 *Physical stage:* <br>
-![Physical stage of design](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/physical_diagram.png)
+![Physical stage of design](https://github.com/alex97iv/superstore/blob/main/Dimensional%20modeling/physical_diagram.png)
 
 ### Analytical cloud DWH example:
 The following analytical decision was chosen to complete the exercise with AWS cloud.
-![Yandex cloud analytical decision](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/cloud_desicion.png)
+![Yandex cloud analytical decision](https://github.com/alex97iv/superstore/blob/main/Dimensional%20modeling/cloud_desicion.png)
 The Postgres DB contains two schemas: staging and business.<br>
 Staging part of the DB was populated by scripts mentioned above.
 Dimensional model diagram for business part of the DB represented in 'Dimensional data model design' part. <br>
@@ -154,5 +154,5 @@ Changed some attributes' names and types to make it more convenient.
 
 ### Dashboard sample:
 I've used DataLens from Yandex as BI tool :
-![pic1](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/dashboard_dataset.png)
-![pic2](https://github.com/alex97iv/DE-content/blob/main/data-learn-course/module02/datalens_dashboard.png)
+![pic1](https://github.com/alex97iv/superstore/blob/main/Dimensional%20modeling/dashboard_dataset.png)
+![pic2](https://github.com/alex97iv/superstore/blob/main/Dimensional%20modeling/datalens_dashboard.png)
